@@ -15,7 +15,7 @@ export default function About() {
         <div>
           <h1 className="text-6xl font-bold">lydia bagdon</h1>
           <h2 className="text-4xl mt-4 font-bold">
-            fullstack web developer & STEM educator
+            fullstack web developer & bilingual STEM educator
           </h2>
           <h2 className="text-2xl mt-4">
             Engineering solutions and explaining concepts — from code to
