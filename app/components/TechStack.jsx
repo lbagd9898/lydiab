@@ -24,8 +24,14 @@ const tools = [
 
 function TechCard({ title, items }) {
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-md shadow-gray-300 flex flex-col gap-4 flex-1">
-      <h3 className="text-lg font-bold" style={{ color: "#1E3A5F" }}>{title}</h3>
+    <div className="relative bg-white border-2 border-black p-6 flex flex-col gap-4 flex-1">
+      <span className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-black" />
+      <span className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-black" />
+      <span className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-black" />
+      <span className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-black" />
+      <h3 className="text-lg font-bold" style={{ color: "#1E3A5F" }}>
+        {title}
+      </h3>
       <div className="grid grid-cols-3 gap-4">
         {items.map(({ name, icon }) => (
           <div key={name} className="flex flex-col items-center gap-1">

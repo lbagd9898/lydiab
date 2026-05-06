@@ -7,6 +7,8 @@ export default function Webdev() {
       className="bg-gray-100 px-6 sm:px-12 lg:px-30 pt-10 pb-[100px] flex flex-col items-center relative z-20"
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%)",
+        backgroundImage: "radial-gradient(circle, rgba(30,58,95,0.18) 2px, transparent 2px)",
+        backgroundSize: "22px 22px",
       }}
     >
       <h2 className="text-4xl font-bold" style={{ color: "#1E3A5F" }}>
