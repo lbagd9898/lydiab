@@ -25,10 +25,10 @@ export default function Tutoring() {
         </TypewriterHeading>
       </FadeIn>
       <FadeIn>
-        <p className="text-lg text-gray-600">
-          With over a Bachelors in Mathematics, and 5 years teaching math,
-          biology, physical science, and English in Costa Rica, I'm well
-          prepared to help your children conquer their learning challenges.
+        <p className="text-lg max-w-5xl text-center text-gray-600">
+          Math, biology, science, English — I've taught it all. With 5 years of
+          experience and a Mathematics degree, I help kids stop struggling and
+          start mastering.
         </p>
       </FadeIn>
       <div className="w-full max-w-[1120px] mt-10 grid grid-cols-[1fr_4fr] gap-6">
@@ -47,7 +47,7 @@ export default function Tutoring() {
               position="English and Science Education Volunteer"
               company="Peace Corps Costa Rica"
               dates="March 2023 – May 2025"
-              description="Reconstructed and expanded the science in English curriculum, a curriculum focused on teaching Costa Rican primary school students science vocabulary in English. Taught English lessons. "
+              description={`Teaching in Costa Rica gave me the unique opportunity to plan and instruct a course called "Science in English" - a course that blended science concepts with English vocabulary for elementary students. I also taught regular English classes, and became fluent in Spanish!`}
             />
           </FadeIn>
           <FadeIn delay={100}>
@@ -56,7 +56,7 @@ export default function Tutoring() {
               position="7th & 8th Grade Science Teacher"
               company="Troy Prep Charter School"
               dates="August 2021 – March 2023"
-              description="Taught high school level biology course to 8th grade students which followed the NYS Living Environment curriculum. Taught chemical and physical science to 7th grade students."
+              description={`I taught 7th grade science and an advanced 8th grade biology course built around New York's Living Environment curriculum — guiding students all the way through to their Regents exam.`}
             />
           </FadeIn>
           <FadeIn delay={200}>
@@ -65,7 +65,7 @@ export default function Tutoring() {
               position="Math Teaching Fellow"
               company="Blueprint Schools Network"
               dates="August 2020 – July 2021"
-              description="Planned lessons for and taught online, supplemental, small group (2-8 student) math classes using various online platforms such as Desmos and ALEKS to students in 6th, 7th, and 8th grade."
+              description={`I planned and taught small group (2-8 student) math classes to 6th, 7th, and 8th grade students completely online due to the COVID pandemic. I utilized with a variety of online math learning platforms such as Desmos and ALEKS.`}
             />
           </FadeIn>
         </div>
