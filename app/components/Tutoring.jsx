@@ -1,11 +1,14 @@
 import Experience from "./Experience";
 import Education from "./Education";
 import FadeIn from "./FadeIn";
+import TypewriterHeading from "./TypewriterHeading";
+import ContactButton from "./ContactButton";
 
 export default function Tutoring() {
   return (
     <section
-      className="bg-blue-100 px-6 sm:px-12 lg:px-30 pb-[100px] flex flex-col items-center gap-6 relative z-10"
+      id="tutoring"
+      className="noise-bg bg-blue-50 px-6 sm:px-12 lg:px-30 pb-[100px] flex flex-col items-center gap-6 relative z-10"
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px))",
         marginTop: "-60px",
@@ -13,12 +16,13 @@ export default function Tutoring() {
       }}
     >
       <FadeIn>
-        <h2
+        <TypewriterHeading
+          chars={8}
           className="text-4xl font-extrabold text-center"
-          style={{ color: "#0D9488" }}
+          style={{ color: "#1E3A5F" }}
         >
           Tutoring
-        </h2>
+        </TypewriterHeading>
       </FadeIn>
       <FadeIn>
         <p className="text-lg text-gray-600">
@@ -31,7 +35,7 @@ export default function Tutoring() {
         <FadeIn>
           <h2
             className="text-3xl font-bold self-start"
-            style={{ color: "#0D9488" }}
+            style={{ color: "#1E3A5F" }}
           >
             Experience
           </h2>
@@ -66,12 +70,10 @@ export default function Tutoring() {
           </FadeIn>
         </div>
 
-        <div className="col-span-2 border-t border-[#0D9488]/30 my-4" />
-
         <FadeIn>
           <h2
             className="text-3xl font-bold self-start"
-            style={{ color: "#0D9488" }}
+            style={{ color: "#1E3A5F" }}
           >
             Education
           </h2>
@@ -85,26 +87,63 @@ export default function Tutoring() {
             />
           </FadeIn>
         </div>
-        <div className="col-span-2 border-t border-[#0D9488]/30 my-4" />
 
         <FadeIn>
           <h2
             className="text-3xl font-bold self-start"
-            style={{ color: "#0D9488" }}
+            style={{ color: "#1E3A5F" }}
           >
             Tutoring Services
           </h2>
         </FadeIn>
         <FadeIn>
-          <ul className="flex flex-col text-lg gap-2 text-gray-700 list-disc list-inside">
-            <li>Mathematics - any level</li>
-            <li>Spanish - any level</li>
-            <li>Science - elementary and middle school level</li>
-            <li>High School Biology (excluding AP/IB)</li>
-            <li>English for new learners</li>
-          </ul>
+          <div className="relative w-full border-2 border-[#1E3A5F]">
+            <span className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#1E3A5F]" />
+            <span className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#1E3A5F]" />
+            <span className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#1E3A5F]" />
+            <span className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#1E3A5F]" />
+            <table className="w-full bg-white text-gray-700">
+              <thead>
+                <tr className="bg-[#1E3A5F] text-white">
+                  <th className="px-5 py-3 text-left font-extrabold tracking-widest text-sm uppercase border-r border-white/20 w-1/2">
+                    Subject
+                  </th>
+                  <th className="px-5 py-3 text-left font-extrabold tracking-widest text-sm uppercase w-1/2">
+                    Level
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  ["Mathematics", "Any level through Calculus"],
+                  ["Spanish", "Any level"],
+                  ["Science", "Elementary and Middle school level"],
+                  ["High School Biology", "Excluding AP/IB"],
+                  ["English as a Foreign Language", "For new learners"],
+                  ["SAT/ACT Math", "Obviously"],
+                ].map(([subject, detail]) => (
+                  <tr
+                    key={subject}
+                    className="group border-b border-[#1E3A5F]/20 last:border-b-0"
+                  >
+                    <td className="px-5 py-3 font-bold border-r border-[#1E3A5F]/20 w-1/2 bg-[#1E3A5F]/5 group-hover:bg-[#1E3A5F]/10 transition-colors">
+                      {subject}
+                    </td>
+                    <td className="px-5 py-3 text-gray-500 w-1/2 group-hover:bg-[#1E3A5F]/5 transition-colors">
+                      {detail}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </FadeIn>
       </div>
+      <FadeIn>
+        <div className="mt-6">
+          <ContactButton text="Contact me about my services" />
+        </div>
+      </FadeIn>
     </section>
   );
 }

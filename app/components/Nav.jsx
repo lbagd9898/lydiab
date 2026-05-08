@@ -8,13 +8,13 @@ export default function Nav() {
     >
       <div>lydia bagdon</div>
       <div className="flex gap-6">
-        <Link href="/" className="hover:underline">
-          Home
+        <Link href="/#webdev" className="nav-link">
+          Websites
         </Link>
-        <Link href="/projects" className="hover:underline">
-          Projects
+        <Link href="/#tutoring" className="nav-link">
+          Tutoring
         </Link>
-        <Link href="/contact" className="hover:underline">
+        <Link href="/#contact" className="nav-link">
           Contact
         </Link>
       </div>

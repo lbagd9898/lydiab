@@ -10,8 +10,14 @@ export default function About() {
   };
 
   return (
-    <section className="relative py-40 px-6 sm:px-12 lg:px-30">
-      <div className="absolute inset-0 bg-gray-100"></div>
+    <section id="about" className="relative py-40 px-6 sm:px-12 lg:px-30">
+      <div
+        className="absolute inset-0 bg-gray-100"
+        style={{
+          backgroundImage: "radial-gradient(circle, rgba(30,58,95,0.18) 2px, transparent 2px)",
+          backgroundSize: "22px 22px",
+        }}
+      />
       <div
         className="absolute inset-0 bg-blue-400"
         style={{
