@@ -11,7 +11,8 @@ export default function IntroAnimation() {
   useEffect(() => {
     const nav = document.querySelector("nav");
     const navH = nav ? nav.getBoundingClientRect().height : 0;
-    setTextPaddingTop(navH + 160);
+    const topPadding = vw >= 1024 ? 160 : vw >= 640 ? 128 : 80;
+    setTextPaddingTop(navH + topPadding);
 
     const vw = window.innerWidth;
     const vh = window.innerHeight;

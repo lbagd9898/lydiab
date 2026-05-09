@@ -1,13 +1,15 @@
 "use client";
+import { useEffect, useState } from "react";
 import { AnimatedBackground } from "animated-backgrounds";
 
+const interactionConfig = { effect: "attract", strength: 0.8, radius: 150, continuous: true };
+
 export default function About() {
-  const interactionConfig = {
-    effect: "attract",
-    strength: 0.8,
-    radius: 150,
-    continuous: true,
-  };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 640);
+  }, []);
 
   return (
     <section
@@ -23,19 +25,21 @@ export default function About() {
         }}
       />
       <div
-        className="absolute inset-0 bg-blue-400"
+        className="absolute inset-0"
         style={{
+          backgroundColor: isMobile ? "#000000" : "#60A5FA",
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px))",
-          willChange: "transform",
         }}
       >
-        <AnimatedBackground
-          animationName="quantumField"
-          theme="portfolio"
-          interactive={true}
-          interactionConfig={interactionConfig}
-          style={{ zIndex: 1 }}
-        ></AnimatedBackground>
+        {!isMobile && (
+          <AnimatedBackground
+            animationName="quantumField"
+            theme="portfolio"
+            interactive={true}
+            interactionConfig={interactionConfig}
+            style={{ zIndex: 1 }}
+          />
+        )}
       </div>
       <div
         className="relative z-10 flex justify-center"
