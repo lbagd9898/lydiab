@@ -1,7 +1,8 @@
 const PhoneIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="w-10 h-10"
+    className="w-6 h-6 sm:w-10 sm:h-10"
+    aria-hidden="true"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -18,7 +19,8 @@ const PhoneIcon = () => (
 const EmailIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="w-10 h-10"
+    className="w-6 h-6 sm:w-10 sm:h-10"
+    aria-hidden="true"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -35,7 +37,8 @@ const EmailIcon = () => (
 const LinkedInIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="w-10 h-10"
+    className="w-6 h-6 sm:w-10 sm:h-10"
+    aria-hidden="true"
     fill="currentColor"
     viewBox="0 0 24 24"
   >
@@ -46,7 +49,8 @@ const LinkedInIcon = () => (
 const GitHubIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="w-10 h-10"
+    className="w-6 h-6 sm:w-10 sm:h-10"
+    aria-hidden="true"
     fill="currentColor"
     viewBox="0 0 24 24"
   >
@@ -92,28 +96,34 @@ export default function Contact() {
     >
       <TypewriterHeading
         chars={7}
-        className="text-4xl font-extrabold text-center"
+        className="text-3xl sm:text-4xl font-extrabold text-center"
         style={{ color: "white", borderRightColor: "white" }}
       >
         Contact
       </TypewriterHeading>
-      <p className="text-lg text-white/80 mb-6">Let's get in touch</p>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
+      <p className="text-base sm:text-lg text-white/80 mb-6">Let's get in touch</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
         {contacts.map(({ icon, label, display, href }) => (
           <a
             key={label}
             href={href}
             target={href.startsWith("http") ? "_blank" : undefined}
             rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="relative flex flex-col items-center gap-4 bg-white p-8 shadow-md shadow-teal-900/30 text-center transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-900/40"
+            aria-label={href.startsWith("http") ? `${label} (opens in new tab)` : label}
+            className="relative flex flex-col items-center gap-4 bg-white p-4 sm:p-8 shadow-md shadow-teal-900/30 text-center transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg hover:shadow-teal-900/40"
           >
             <span className="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-[#0D9488]" />
             <span className="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-[#0D9488]" />
             <span className="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-[#0D9488]" />
             <span className="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-[#0D9488]" />
-            <span style={{ color: "#0D9488" }}>{icon}</span>
-            <span className="font-bold text-base" style={{ color: "#0D9488" }}>
-              {label}
+            <span
+              className="flex sm:flex-col items-center gap-3 sm:gap-4"
+              style={{ color: "#0D9488" }}
+            >
+              {icon}
+              <span className="hidden sm:block font-bold text-base">
+                {label}
+              </span>
             </span>
             <span className="text-base break-all" style={{ color: "#1E3A5F" }}>
               {display}

@@ -10,11 +10,15 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="relative py-40 px-6 sm:px-12 lg:px-30">
+    <section
+      id="about"
+      className="relative py-20 sm:py-32 lg:py-40 px-6 sm:px-12 lg:px-30"
+    >
       <div
         className="absolute inset-0 bg-gray-100"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(30,58,95,0.18) 2px, transparent 2px)",
+          backgroundImage:
+            "radial-gradient(circle, rgba(30,58,95,0.18) 2px, transparent 2px)",
           backgroundSize: "22px 22px",
         }}
       />
@@ -37,11 +41,13 @@ export default function About() {
         style={{ color: "#1E3A5F" }}
       >
         <div className="text-white">
-          <h1 className="text-6xl font-bold">lydia bagdon</h1>
-          <h2 className="text-4xl mt-4 font-bold">
-            fullstack web developer & bilingual STEM educator
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+            lydia bagdon
+          </h1>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
+            full-stack web developer & bilingual STEM educator
           </h2>
-          <h2 className="text-2xl mt-4">
+          <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4">
             Engineering solutions and explaining concepts — from code to
             calculus.
           </h2>

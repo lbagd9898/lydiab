@@ -8,6 +8,14 @@ export default function TypewriterHeading({ children, className = "", style, cha
     const el = ref.current;
     if (!el) return;
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.style.setProperty("--typewriter-width", `${chars}ch`);
+      el.style.animation = "none";
+      el.style.width = `${chars}ch`;
+      el.style.borderRight = "none";
+      return;
+    }
+
     const startObserver = () => {
       const observer = new IntersectionObserver(
         ([entry]) => {

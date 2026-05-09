@@ -11,21 +11,22 @@ export default function Project({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative grid grid-cols-2 shadow-md shadow-gray-300 bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-gray-400 cursor-pointer">
+      aria-label={`${title} (opens in new tab)`}
+      className="relative grid grid-cols-1 sm:grid-cols-2 shadow-md shadow-gray-300 bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-gray-400 cursor-pointer">
       {imageLeft
         ? <span className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-[#1E3A5F]" />
         : <span className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#1E3A5F]" />
       }
       <div
-        className={`flex items-center justify-center bg-gray-50 p-6 h-[307px] overflow-hidden ${
-          imageLeft ? "order-1" : "order-2"
+        className={`flex items-center justify-center bg-gray-50 p-6 overflow-hidden order-1 sm:h-[307px] ${
+          imageLeft ? "sm:order-1" : "sm:order-2"
         }`}
       >
         <img src={image} alt={title} className="w-full h-auto object-contain" />
       </div>
       <div
-        className={`flex flex-col p-8 h-full overflow-hidden ${
-          imageLeft ? "order-2" : "order-1"
+        className={`flex flex-col p-5 sm:p-8 h-full overflow-hidden order-2 ${
+          imageLeft ? "sm:order-2" : "sm:order-1"
         }`}
       >
         <h3 className="text-xl font-bold" style={{ color: "#1E3A5F" }}>

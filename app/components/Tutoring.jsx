@@ -18,27 +18,27 @@ export default function Tutoring() {
       <FadeIn>
         <TypewriterHeading
           chars={8}
-          className="text-4xl font-extrabold text-center"
+          className="text-3xl sm:text-4xl font-extrabold text-center"
           style={{ color: "#1E3A5F" }}
         >
           Tutoring
         </TypewriterHeading>
       </FadeIn>
       <FadeIn>
-        <p className="text-lg max-w-5xl text-center text-gray-600">
+        <p className="text-lg sm:text-xl font-bold max-w-5xl text-center text-gray-600">
           Math, biology, science, English — I've taught it all. With 5 years of
           experience and a Mathematics degree, I help kids stop struggling and
           start mastering.
         </p>
       </FadeIn>
-      <div className="w-full max-w-[1120px] mt-10 grid grid-cols-[1fr_4fr] gap-6">
+      <div className="w-full max-w-[1120px] mt-10 grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-6">
         <FadeIn>
-          <h2
-            className="text-3xl font-bold self-start"
+          <h3
+            className="text-2xl sm:text-3xl font-bold self-start"
             style={{ color: "#1E3A5F" }}
           >
             Experience
-          </h2>
+          </h3>
         </FadeIn>
         <div className="flex flex-col gap-6">
           <FadeIn delay={0}>
@@ -71,12 +71,12 @@ export default function Tutoring() {
         </div>
 
         <FadeIn>
-          <h2
-            className="text-3xl font-bold self-start"
+          <h3
+            className="text-2xl sm:text-3xl font-bold self-start"
             style={{ color: "#1E3A5F" }}
           >
             Education
-          </h2>
+          </h3>
         </FadeIn>
         <div className="flex flex-col gap-6">
           <FadeIn>
@@ -89,12 +89,12 @@ export default function Tutoring() {
         </div>
 
         <FadeIn>
-          <h2
-            className="text-3xl font-bold self-start"
+          <h3
+            className="text-2xl sm:text-3xl font-bold self-start"
             style={{ color: "#1E3A5F" }}
           >
             Tutoring Services
-          </h2>
+          </h3>
         </FadeIn>
         <FadeIn>
           <div className="relative w-full border-2 border-[#1E3A5F]">
@@ -105,10 +105,10 @@ export default function Tutoring() {
             <table className="w-full bg-white text-gray-700">
               <thead>
                 <tr className="bg-[#1E3A5F] text-white">
-                  <th className="px-5 py-3 text-left font-extrabold tracking-widest text-sm uppercase border-r border-white/20 w-1/2">
+                  <th className="px-3 py-2 sm:px-5 sm:py-3 text-left font-extrabold tracking-widest text-xs sm:text-sm uppercase border-r border-white/20 w-1/2">
                     Subject
                   </th>
-                  <th className="px-5 py-3 text-left font-extrabold tracking-widest text-sm uppercase w-1/2">
+                  <th className="px-3 py-2 sm:px-5 sm:py-3 text-left font-extrabold tracking-widest text-xs sm:text-sm uppercase w-1/2">
                     Level
                   </th>
                 </tr>
@@ -126,10 +126,10 @@ export default function Tutoring() {
                     key={subject}
                     className="group border-b border-[#1E3A5F]/20 last:border-b-0"
                   >
-                    <td className="px-5 py-3 font-bold border-r border-[#1E3A5F]/20 w-1/2 bg-[#1E3A5F]/5 group-hover:bg-[#1E3A5F]/10 transition-colors">
+                    <td className="px-3 py-2 sm:px-5 sm:py-3 text-sm sm:text-base font-bold border-r border-[#1E3A5F]/20 w-1/2 bg-[#1E3A5F]/5 group-hover:bg-[#1E3A5F]/10 transition-colors">
                       {subject}
                     </td>
-                    <td className="px-5 py-3 text-gray-500 w-1/2 group-hover:bg-[#1E3A5F]/5 transition-colors">
+                    <td className="px-3 py-2 sm:px-5 sm:py-3 text-sm sm:text-base text-gray-500 w-1/2 group-hover:bg-[#1E3A5F]/5 transition-colors">
                       {detail}
                     </td>
                   </tr>

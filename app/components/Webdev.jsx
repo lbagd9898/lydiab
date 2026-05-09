@@ -19,30 +19,38 @@ export default function Webdev() {
     >
       <FadeIn>
         <TypewriterHeading
-          chars={21}
-          className="text-4xl font-bold"
+          chars={26}
+          className="text-2xl sm:text-4xl font-bold text-center"
           style={{ color: "#1E3A5F" }}
         >
-          Fullstack Development
+          Full-Stack Web Development
         </TypewriterHeading>
       </FadeIn>
       <FadeIn>
-        <p className="mt-6 text-center max-w-2xl text-lg">
-          I create scalable, responsive, <em>customizable</em> websites in
-          Next.js, React, Node.js, and Express.
+        <p className="mt-6 font-bold text-center max-w-2xl text-lg sm:text-xl">
+          Scalable. Responsive. Yours. I build full-stack websites tailored to
+          your small business, creative project, or portfolio.
         </p>
+      </FadeIn>
+      <FadeIn>
+        <em className="block text-center max-w-2xl text-base sm:text-lg text-gray-500 mt-2">
+          As an educator and a linguist, I bring something most developers don't —
+          clear communication and zero jargon. You'll always know what's being
+          built, why, and when. No middlemen, no confusion, just a website that
+          works.
+        </em>
       </FadeIn>
       <FadeIn>
         <TechStack />
       </FadeIn>
-      <div className="mt-10 w-full max-w-[1120px] grid grid-cols-[1fr_4fr] gap-6">
+      <div className="mt-10 w-full max-w-[1120px] grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-6">
         <FadeIn>
-          <h2
-            className="text-3xl font-bold self-start"
+          <h3
+            className="text-2xl sm:text-3xl font-bold self-start"
             style={{ color: "#1E3A5F" }}
           >
             Projects
-          </h2>
+          </h3>
         </FadeIn>
         <div className="flex flex-col gap-5">
           <FadeIn delay={0}>

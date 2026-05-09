@@ -57,7 +57,7 @@ function TechCard({ title, items }) {
 
 export default function TechStack() {
   return (
-    <div className="mt-10 w-full max-w-[1120px] flex flex-row gap-6">
+    <div className="mt-10 w-full max-w-[1120px] flex flex-col sm:flex-row gap-6">
       <TechCard title="Languages" items={languages} />
       <TechCard title="Frameworks" items={frameworks} />
       <TechCard title="Tools" items={tools} />
