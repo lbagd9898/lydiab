@@ -90,11 +90,11 @@ export default function IntroAnimation() {
             transition: "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease",
           }}
         >
-          <h1 className="text-6xl font-bold">lydia bagdon</h1>
-          <h2 className="text-4xl mt-4 font-bold">
-            fullstack web developer & bilingual STEM educator
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">lydia bagdon</h1>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
+            full-stack web developer & bilingual STEM educator
           </h2>
-          <h2 className="text-2xl mt-4">
+          <h2 className="text-lg sm:text-xl lg:text-2xl mt-4">
             Engineering solutions and explaining concepts — from code to calculus.
           </h2>
         </div>
