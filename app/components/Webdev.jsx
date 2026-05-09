@@ -20,6 +20,7 @@ export default function Webdev() {
       <FadeIn>
         <TypewriterHeading
           chars={26}
+          delay={1000}
           className="text-2xl sm:text-4xl font-bold text-center"
           style={{ color: "#1E3A5F" }}
         >

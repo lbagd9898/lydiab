@@ -1,8 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatedBackground } from "animated-backgrounds";
-
-const interactionConfig = { effect: "attract", strength: 0.8, radius: 150, continuous: true };
 
 export default function IntroAnimation() {
   const [clipPath, setClipPath] = useState(null);
@@ -61,14 +58,7 @@ export default function IntroAnimation() {
         transition: transitioning ? "clip-path 1.2s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
       }}
     >
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "#60A5FA" }} />
-      <AnimatedBackground
-        animationName="quantumField"
-        theme="portfolio"
-        interactive={true}
-        interactionConfig={interactionConfig}
-        style={{ zIndex: 1 }}
-      />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "#000000" }} />
       <div
         style={{
           position: "absolute",
