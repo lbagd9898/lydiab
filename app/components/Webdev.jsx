@@ -12,7 +12,7 @@ export default function Webdev() {
       style={{
         clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%)",
         backgroundImage:
-          "radial-gradient(circle, rgba(30,58,95,0.18) 2px, transparent 2px)",
+          "radial-gradient(circle, rgba(30,58,95,0.12) 2px, transparent 2px)",
         backgroundSize: "22px 22px",
         scrollMarginTop: "80px",
       }}
@@ -36,6 +36,12 @@ export default function Webdev() {
       <FadeIn>
         <TechStack />
       </FadeIn>
+      <em className="block mt-10 font-bold text-center max-w-5xl text-lg sm:text-xl text-black mt-2">
+        As an educator and a linguist, I bring something most developers don't —
+        clear communication and zero jargon. You'll always know what's being
+        built, why, and when. No middlemen, no confusion, just a website that
+        works.
+      </em>
       <FadeIn></FadeIn>
       <div className="mt-10 w-full max-w-[1120px] grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-6">
         <FadeIn>
@@ -94,12 +100,6 @@ export default function Webdev() {
           </FadeIn>
         </div>
       </div>
-      <em className="block mt-10 font-bold text-center max-w-5xl text-lg sm:text-xl text-black mt-2">
-        As an educator and a linguist, I bring something most developers don't —
-        clear communication and zero jargon. You'll always know what's being
-        built, why, and when. No middlemen, no confusion, just a website that
-        works.
-      </em>
       <FadeIn>
         <div className="mt-10">
           <ContactButton text="Let's build something together" />

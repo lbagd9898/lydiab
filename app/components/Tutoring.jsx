@@ -115,12 +115,12 @@ export default function Tutoring() {
               </thead>
               <tbody>
                 {[
-                  ["Mathematics", "Any level through Calculus"],
+                  ["Mathematics", "Any level through calculus"],
                   ["Spanish", "Any level"],
-                  ["Science", "Elementary and Middle school level"],
-                  ["High School Biology", "Excluding AP/IB"],
-                  ["English as a Foreign Language", "For new learners"],
-                  ["SAT/ACT Math", "Obviously"],
+                  ["Science", "Elementary and middle school level"],
+                  ["High school biology", "Excluding AP/IB"],
+                  ["English as a foreign language", "For new learners"],
+                  ["SAT/ACT math & science", "Obviously"],
                 ].map(([subject, detail]) => (
                   <tr
                     key={subject}

@@ -26,6 +26,7 @@ export default function About() {
         className="absolute inset-0 bg-blue-400"
         style={{
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px))",
+          willChange: "transform",
         }}
       >
         <AnimatedBackground
@@ -48,8 +49,8 @@ export default function About() {
             full-stack web developer & bilingual STEM educator
           </h2>
           <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4">
-            Engineering solutions and explaining concepts — from code to
-            calculus.
+            engineering solutions and explaining concepts — from code to
+            calculus
           </h2>
         </div>
       </div>
