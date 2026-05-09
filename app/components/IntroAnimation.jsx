@@ -11,11 +11,10 @@ export default function IntroAnimation() {
   useEffect(() => {
     const nav = document.querySelector("nav");
     const navH = nav ? nav.getBoundingClientRect().height : 0;
-    const topPadding = vw >= 1024 ? 160 : vw >= 640 ? 128 : 80;
-    setTextPaddingTop(navH + topPadding);
-
     const vw = window.innerWidth;
     const vh = window.innerHeight;
+    const topPadding = vw >= 1024 ? 160 : vw >= 640 ? 128 : 80;
+    setTextPaddingTop(navH + topPadding);
 
     setClipPath(`polygon(0px 0px, ${vw}px 0px, ${vw}px ${vh}px, 0px ${vh}px)`);
 
