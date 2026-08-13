@@ -6,6 +6,7 @@ export default function IntroAnimation() {
   const [transitioning, setTransitioning] = useState(false);
   const [done, setDone] = useState(false);
   const [textPaddingTop, setTextPaddingTop] = useState(0);
+  const [textPaddingX, setTextPaddingX] = useState(24);
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
@@ -15,6 +16,9 @@ export default function IntroAnimation() {
     const vh = window.innerHeight;
     const topPadding = vw >= 1024 ? 160 : vw >= 640 ? 128 : 80;
     setTextPaddingTop(navH + topPadding);
+    // Match About section's responsive px-6 / sm:px-12 / lg:px-30 so text
+    // wraps identically and the overlay text lands at the same X as the page.
+    setTextPaddingX(vw >= 1024 ? 120 : vw >= 640 ? 48 : 24);
 
     setClipPath(`polygon(0px 0px, ${vw}px 0px, ${vw}px ${vh}px, 0px ${vh}px)`);
 
@@ -68,8 +72,8 @@ export default function IntroAnimation() {
           justifyContent: "center",
           alignItems: "flex-start",
           paddingTop: `${textPaddingTop}px`,
-          paddingLeft: "1.5rem",
-          paddingRight: "1.5rem",
+          paddingLeft: `${textPaddingX}px`,
+          paddingRight: `${textPaddingX}px`,
           color: "white",
         }}
       >
