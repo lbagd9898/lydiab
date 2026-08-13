@@ -47,14 +47,14 @@ export default function About() {
       >
         <div className="text-white">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            lydia bagdon
+            Lydia Bagdon
           </h1>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
-            full-stack web developer & bilingual STEM educator
+            Full-Stack Web Developer | Bilingual STEM Educator
           </h2>
           <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4">
-            engineering solutions and explaining concepts — from code to
-            calculus
+            Engineering solutions and explaining concepts — from code to
+            calculus.
           </h2>
         </div>
       </div>
