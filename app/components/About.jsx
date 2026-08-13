@@ -8,7 +8,7 @@ export default function About() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 640);
+    setIsMobile(window.innerWidth < 1024);
   }, []);
 
   return (
@@ -27,7 +27,7 @@ export default function About() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: isMobile ? "#000000" : "#60A5FA",
+          backgroundColor: isMobile ? "#1E3A5F" : "#60A5FA",
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px))",
         }}
       >

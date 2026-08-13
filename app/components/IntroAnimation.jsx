@@ -62,7 +62,7 @@ export default function IntroAnimation() {
         transition: transitioning ? "clip-path 1.2s cubic-bezier(0.4, 0, 0.2, 1)" : "none",
       }}
     >
-      <div style={{ position: "absolute", inset: 0, backgroundColor: "#000000" }} />
+      <div style={{ position: "absolute", inset: 0, backgroundColor: "#1E3A5F" }} />
       <div
         style={{
           position: "absolute",
