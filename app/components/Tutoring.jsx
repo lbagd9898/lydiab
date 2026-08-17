@@ -26,9 +26,11 @@ export default function Tutoring() {
       </FadeIn>
       <FadeIn>
         <p className="text-lg sm:text-xl font-bold max-w-5xl text-center text-gray-600">
-          Math, biology, science, English — I've taught it all. With 5 years of
-          experience and a Mathematics degree, I help kids stop struggling and
-          start mastering.
+          With over 5 years of experience teaching math, science, ESL, and
+          Spanish, I know exactly what it takes for students to stop struggling
+          and start mastering. I bring proven strategies, expertise, and a
+          genuine investment in every student's success — so they don't just
+          pass, they build real confidence.
         </p>
       </FadeIn>
       <div className="w-full max-w-[1120px] mt-10 grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-6">
@@ -43,6 +45,15 @@ export default function Tutoring() {
         <div className="flex flex-col gap-6">
           <FadeIn delay={0}>
             <Experience
+              imageLeft={false}
+              position="Private Tutoring"
+              company="Remote & In Person"
+              dates="March 2024 – Present"
+              description={`With experience tutoring test prep, math, science, and ESL, I take a student-centered approach — guiding students toward their own understanding rather than simply providing answers. The result is lasting comprehension and confident, independent learners.`}
+            />
+          </FadeIn>
+          <FadeIn delay={100}>
+            <Experience
               imageLeft={true}
               position="English and Science Education Volunteer"
               company="Peace Corps Costa Rica"
@@ -50,7 +61,7 @@ export default function Tutoring() {
               description={`Teaching in Costa Rica gave me the unique opportunity to plan and instruct a course called "Science in English" - a course that blended science concepts with English vocabulary for elementary students. I also taught regular English classes, and became fluent in Spanish!`}
             />
           </FadeIn>
-          <FadeIn delay={100}>
+          <FadeIn delay={200}>
             <Experience
               imageLeft={false}
               position="7th & 8th Grade Science Teacher"
@@ -59,7 +70,7 @@ export default function Tutoring() {
               description={`I taught 7th grade science and an advanced 8th grade biology course built around New York's Living Environment curriculum — guiding students all the way through to their Regents exam.`}
             />
           </FadeIn>
-          <FadeIn delay={200}>
+          <FadeIn delay={300}>
             <Experience
               imageLeft={true}
               position="Math Teaching Fellow"

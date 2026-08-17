@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function IntroAnimation() {
   const [clipPath, setClipPath] = useState(null);
@@ -8,8 +9,6 @@ export default function IntroAnimation() {
   const [textPaddingTop, setTextPaddingTop] = useState(0);
   const [textPaddingX, setTextPaddingX] = useState(24);
   const [textVisible, setTextVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const nav = document.querySelector("nav");
     const navH = nav ? nav.getBoundingClientRect().height : 0;
@@ -20,7 +19,6 @@ export default function IntroAnimation() {
     // Match About section's responsive px-6 / sm:px-12 / lg:px-30 so text
     // wraps identically and the overlay text lands at the same X as the page.
     setTextPaddingX(vw >= 1024 ? 120 : vw >= 640 ? 48 : 24);
-    setIsMobile(vw < 1024);
 
     setClipPath(`polygon(0px 0px, ${vw}px 0px, ${vw}px ${vh}px, 0px ${vh}px)`);
 
@@ -74,7 +72,7 @@ export default function IntroAnimation() {
         style={{
           position: "absolute",
           inset: 0,
-          backgroundColor: isMobile ? "#1E3A5F" : "#000000",
+          backgroundColor: "#1B2D3E",
         }}
       />
       <div
@@ -92,6 +90,7 @@ export default function IntroAnimation() {
         }}
       >
         <div
+          className="flex items-center gap-8 sm:gap-12"
           style={{
             transform: textVisible ? "translateY(0)" : "translateY(-60px)",
             opacity: textVisible ? 1 : 0,
@@ -99,16 +98,36 @@ export default function IntroAnimation() {
               "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease",
           }}
         >
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
-            Lydia Bagdon
-          </h1>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
-            Full-Stack Web Developer | Bilingual STEM Educator
-          </h2>
-          <h2 className="text-lg sm:text-xl lg:text-2xl mt-4">
-            Engineering solutions and explaining concepts — from code to
-            calculus.
-          </h2>
+          <div className="hidden sm:block shrink-0">
+            <Image
+              src="/headshot.jpeg"
+              alt="Lydia Bagdon"
+              width={208}
+              height={208}
+              className="sm:h-40 sm:w-40 lg:h-52 lg:w-52 rounded-full border-2 border-white object-cover object-top"
+            />
+          </div>
+          <div>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold flex items-center gap-3">
+              <span className="sm:hidden h-14 w-14 rounded-full border-2 border-white overflow-hidden shrink-0 inline-block">
+                <Image
+                  src="/headshot.jpeg"
+                  alt="Lydia Bagdon"
+                  width={56}
+                  height={56}
+                  className="h-full w-full object-cover object-top scale-125"
+                />
+              </span>
+              Lydia Bagdon
+            </h1>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
+              Full-Stack Web Developer | Bilingual STEM Educator
+            </h2>
+            <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4">
+              Engineering solutions and explaining concepts — from code to
+              calculus.
+            </h2>
+          </div>
         </div>
       </div>
     </div>

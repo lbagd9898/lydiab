@@ -14,8 +14,8 @@ export default function Project({
       aria-label={`${title} (opens in new tab)`}
       className="relative grid grid-cols-1 sm:grid-cols-2 shadow-md shadow-gray-300 bg-white transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:shadow-gray-400 cursor-pointer">
       {imageLeft
-        ? <span className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-[#1E3A5F]" />
-        : <span className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#1E3A5F]" />
+        ? <span className="hidden sm:block absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-[#1E3A5F]" />
+        : <span className="hidden sm:block absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-[#1E3A5F]" />
       }
       <div
         className={`flex items-center justify-center bg-gray-50 p-6 overflow-hidden order-1 sm:h-[307px] ${

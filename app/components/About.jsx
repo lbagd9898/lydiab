@@ -1,16 +1,6 @@
-"use client";
-import { useEffect, useState } from "react";
-import { AnimatedBackground } from "animated-backgrounds";
-
-const interactionConfig = { effect: "attract", strength: 0.8, radius: 150, continuous: true };
+import Image from "next/image";
 
 export default function About() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 1024);
-  }, []);
-
   return (
     <section
       id="about"
@@ -27,26 +17,34 @@ export default function About() {
       <div
         className="absolute inset-0"
         style={{
-          backgroundColor: isMobile ? "#1E3A5F" : "#60A5FA",
+          backgroundColor: "#1B2D3E",
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 40px))",
         }}
-      >
-        {!isMobile && (
-          <AnimatedBackground
-            animationName="quantumField"
-            theme="portfolio"
-            interactive={true}
-            interactionConfig={interactionConfig}
-            style={{ zIndex: 1 }}
-          />
-        )}
-      </div>
+      />
       <div
-        className="relative z-10 flex justify-center"
+        className="relative z-10 flex justify-center items-center gap-8 sm:gap-12"
         style={{ color: "#1E3A5F" }}
       >
+        <div className="hidden sm:block shrink-0">
+          <Image
+            src="/headshot.jpeg"
+            alt="Lydia Bagdon"
+            width={208}
+            height={208}
+            className="sm:h-40 sm:w-40 lg:h-52 lg:w-52 rounded-full border-2 border-white object-cover object-top"
+          />
+        </div>
         <div className="text-white">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold flex items-center gap-3">
+            <span className="sm:hidden h-14 w-14 rounded-full border-2 border-white overflow-hidden shrink-0 inline-block">
+              <Image
+                src="/headshot.jpeg"
+                alt="Lydia Bagdon"
+                width={56}
+                height={56}
+                className="h-full w-full object-cover object-top scale-125"
+              />
+            </span>
             Lydia Bagdon
           </h1>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">

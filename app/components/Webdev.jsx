@@ -37,12 +37,6 @@ export default function Webdev() {
       <FadeIn>
         <TechStack />
       </FadeIn>
-      <em className="block mt-10 font-bold text-center max-w-5xl text-lg sm:text-xl text-black mt-2">
-        As an educator and a linguist, I bring something most developers don't —
-        clear communication and zero jargon. You'll always know what's being
-        built, why, and when. No middlemen, no confusion, just a website that
-        works.
-      </em>
       <FadeIn></FadeIn>
       <div className="mt-10 w-full max-w-[1120px] grid grid-cols-1 lg:grid-cols-[1fr_4fr] gap-6">
         <FadeIn>
