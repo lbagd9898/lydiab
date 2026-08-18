@@ -27,22 +27,24 @@ export default function About() {
       >
         <div className="hidden sm:block shrink-0">
           <Image
-            src="/headshot.jpeg"
+            src="/chalkboard.png"
             alt="Lydia Bagdon"
-            width={208}
-            height={208}
-            className="sm:h-40 sm:w-40 lg:h-52 lg:w-52 rounded-full border-2 border-white object-cover object-top"
+            width={600}
+            height={600}
+            quality={90}
+            className="sm:h-40 sm:w-40 lg:h-52 lg:w-52 rounded-full border-2 border-white object-cover object-[30%_center]"
           />
         </div>
         <div className="text-white">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold flex items-center gap-3">
             <span className="sm:hidden h-14 w-14 rounded-full border-2 border-white overflow-hidden shrink-0 inline-block">
               <Image
-                src="/headshot.jpeg"
+                src="/chalkboard.png"
                 alt="Lydia Bagdon"
-                width={56}
-                height={56}
-                className="h-full w-full object-cover object-top scale-125"
+                width={300}
+                height={300}
+                quality={90}
+                className="h-full w-full object-cover object-[10%_center] scale-125"
               />
             </span>
             Lydia Bagdon

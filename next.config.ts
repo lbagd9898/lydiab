@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
         hostname: "placehold.co",
       },
     ],
+    qualities: [75, 90],
   },
 };
 
