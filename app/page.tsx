@@ -9,8 +9,8 @@ export default function Home() {
     <main className="flex flex-col flex-1 font-sans">
       <IntroAnimation />
       <About />
-      <Webdev />
       <Tutoring />
+      <Webdev />
       <Contact />
     </main>
   );

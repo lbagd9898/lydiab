@@ -8,11 +8,9 @@ export default function Tutoring() {
   return (
     <section
       id="tutoring"
-      className="noise-bg bg-blue-50 px-6 sm:px-12 lg:px-30 pb-[100px] flex flex-col items-center gap-6 relative z-10"
+      className="noise-bg bg-blue-50 px-6 sm:px-12 lg:px-30 pt-10 pb-[100px] flex flex-col items-center gap-6 relative z-20"
       style={{
-        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px))",
-        marginTop: "-60px",
-        paddingTop: "calc(2.5rem + 60px)",
+        clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%)",
       }}
     >
       <FadeIn>

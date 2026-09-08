@@ -8,12 +8,14 @@ export default function Webdev() {
   return (
     <section
       id="webdev"
-      className="bg-gray-100 px-6 sm:px-12 lg:px-30 pt-10 pb-[100px] flex flex-col items-center relative z-20"
+      className="bg-gray-100 px-6 sm:px-12 lg:px-30 pb-[100px] flex flex-col items-center relative z-10"
       style={{
-        clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 60px), 0 100%)",
+        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 60px))",
         backgroundImage:
           "radial-gradient(circle, rgba(30,58,95,0.12) 2px, transparent 2px)",
         backgroundSize: "22px 22px",
+        marginTop: "-60px",
+        paddingTop: "calc(2.5rem + 60px)",
         scrollMarginTop: "80px",
       }}
     >

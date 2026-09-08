@@ -10,11 +10,11 @@ export default function Nav() {
         Lydia Bagdon
       </Link>
       <div className="flex gap-6">
-        <Link href="/#webdev" className="nav-link">
-          Websites
-        </Link>
         <Link href="/#tutoring" className="nav-link">
           Tutoring
+        </Link>
+        <Link href="/#webdev" className="nav-link">
+          Websites
         </Link>
         <Link href="/#contact" className="nav-link">
           Contact

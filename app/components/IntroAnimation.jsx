@@ -1,24 +1,23 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import HeroContent from "./HeroContent";
 
 export default function IntroAnimation() {
   const [clipPath, setClipPath] = useState(null);
   const [transitioning, setTransitioning] = useState(false);
   const [done, setDone] = useState(false);
-  const [textPaddingTop, setTextPaddingTop] = useState(0);
-  const [textPaddingX, setTextPaddingX] = useState(24);
+  const [heroRect, setHeroRect] = useState(null);
   const [textVisible, setTextVisible] = useState(false);
+
   useEffect(() => {
-    const nav = document.querySelector("nav");
-    const navH = nav ? nav.getBoundingClientRect().height : 0;
     const vw = window.innerWidth;
     const vh = window.innerHeight;
-    const topPadding = vw >= 1024 ? 160 : vw >= 640 ? 128 : 80;
-    setTextPaddingTop(navH + topPadding);
-    // Match About section's responsive px-6 / sm:px-12 / lg:px-30 so text
-    // wraps identically and the overlay text lands at the same X as the page.
-    setTextPaddingX(vw >= 1024 ? 120 : vw >= 640 ? 48 : 24);
+
+    const hero = document.getElementById("about-hero");
+    if (hero) {
+      const r = hero.getBoundingClientRect();
+      setHeroRect({ top: r.top, left: r.left });
+    }
 
     setClipPath(`polygon(0px 0px, ${vw}px 0px, ${vw}px ${vh}px, 0px ${vh}px)`);
 
@@ -75,60 +74,18 @@ export default function IntroAnimation() {
           backgroundColor: "#1B2D3E",
         }}
       />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          zIndex: 10,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          paddingTop: `${textPaddingTop}px`,
-          paddingLeft: `${textPaddingX}px`,
-          paddingRight: `${textPaddingX}px`,
-          color: "white",
-        }}
-      >
-        <div
-          className="flex items-center gap-8 sm:gap-12"
+      <div style={{ position: "absolute", inset: 0, zIndex: 10 }}>
+        <HeroContent
           style={{
+            position: "absolute",
+            top: heroRect ? heroRect.top : 0,
+            left: heroRect ? heroRect.left : 0,
             transform: textVisible ? "translateY(0)" : "translateY(-60px)",
-            opacity: textVisible ? 1 : 0,
+            opacity: heroRect && textVisible ? 1 : 0,
             transition:
               "transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease",
           }}
-        >
-          <div className="hidden sm:block shrink-0">
-            <Image
-              src="/headshot.jpeg"
-              alt="Lydia Bagdon"
-              width={208}
-              height={208}
-              className="sm:h-40 sm:w-40 lg:h-52 lg:w-52 rounded-full border-2 border-white object-cover object-top"
-            />
-          </div>
-          <div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold flex items-center gap-3">
-              <span className="sm:hidden h-14 w-14 rounded-full border-2 border-white overflow-hidden shrink-0 inline-block">
-                <Image
-                  src="/headshot.jpeg"
-                  alt="Lydia Bagdon"
-                  width={56}
-                  height={56}
-                  className="h-full w-full object-cover object-top scale-125"
-                />
-              </span>
-              Lydia Bagdon
-            </h1>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
-              Full-Stack Web Developer | Bilingual STEM Educator
-            </h2>
-            <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4">
-              Engineering solutions and explaining concepts — from code to
-              calculus.
-            </h2>
-          </div>
-        </div>
+        />
       </div>
     </div>
   );
