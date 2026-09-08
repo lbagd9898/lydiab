@@ -16,7 +16,7 @@ export default function IntroAnimation() {
     const hero = document.getElementById("about-hero");
     if (hero) {
       const r = hero.getBoundingClientRect();
-      setHeroRect({ top: r.top, left: r.left });
+      setHeroRect({ top: r.top, left: r.left, width: r.width });
     }
 
     setClipPath(`polygon(0px 0px, ${vw}px 0px, ${vw}px ${vh}px, 0px ${vh}px)`);
@@ -80,6 +80,7 @@ export default function IntroAnimation() {
             position: "absolute",
             top: heroRect ? heroRect.top : 0,
             left: heroRect ? heroRect.left : 0,
+            width: heroRect ? heroRect.width : undefined,
             transform: textVisible ? "translateY(0)" : "translateY(-60px)",
             opacity: heroRect && textVisible ? 1 : 0,
             transition:
