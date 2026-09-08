@@ -32,11 +32,10 @@ export default function HeroContent({ id, style, className = "" }) {
           Lydia Bagdon
         </h1>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl mt-4 font-bold">
-          Bilingual STEM Educator | Full-Stack Web Development
+          Bilingual STEM Educator | Full-Stack Web Developer
         </h2>
         <h2 className="text-lg font-bold sm:text-xl lg:text-2xl mt-4">
-          Explaining concepts and engineering solutions — from code to
-          calculus.
+          Explaining concepts and engineering solutions — from code to calculus.
         </h2>
       </div>
     </div>

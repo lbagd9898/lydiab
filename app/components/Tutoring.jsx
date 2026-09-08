@@ -90,6 +90,13 @@ export default function Tutoring() {
         <div className="flex flex-col gap-6">
           <FadeIn>
             <Education
+              school="New York University"
+              degree="Master of Science in Computer Engineering"
+              years="2026-2028"
+            />
+          </FadeIn>
+          <FadeIn>
+            <Education
               school="Hamilton College"
               degree="Bachelor of Arts in Mathematics, Minor in Hispanic Studies"
               years="2016 – 2020"
@@ -126,6 +133,7 @@ export default function Tutoring() {
                 {[
                   ["Mathematics", "Any Level"],
                   ["Spanish", "Any Level"],
+                  ["Computer Science", "Any Level"],
                   ["Science/ELA", "Elementary and Middle School Level"],
                   ["High School Biology", "Regents Level"],
                   ["EFL/ESL", "Any Level"],
